@@ -1,6 +1,31 @@
 .header {
-   padding: 4rem 4rem;
+   padding: 2rem 4rem;
    display: flex;
    justify-content: space-between;
    align-items: center;
+}
+
+.section-overview {
+   padding: 7rem 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   .text-box {
+      width: 50%;
+      text-align: center;
+   }
+}
+
+.section-about {
+   position: relative;
+   width: 85%;
+   margin: 0 auto;
+}
+
+.section-services {
+   height: 60rem;
+   margin-left: 10rem;
+   display: flex;
+   align-items: flex-end;
 }

@@ -1,3 +1,10 @@
+//CLEARFIX
+.clearfix::after {
+   content: "";
+   clear: both;
+   display: table;
+}
+
 /////////////////////////////////
 //////////LOGO
 .logo-box {
@@ -27,4 +34,164 @@
       color: $color-primary-light;
       font-size: 1.4rem;
    }
+
+   &__link:hover {
+      color: $color-primary-dark;
+   }
+}
+
+//////////////////////////////
+/////////Textbox
+.heading-primary {
+   font-size: 4rem;
+   &--light {
+      color: $color-heading;
+   }
+   &--dark {
+      color: $color-heading;
+   }
+}
+.heading-secondary {
+   font-size: 1.4rem;
+   color: $color-primary-light;
+   text-transform: uppercase;
+}
+
+.paragraph {
+   width: 70%;
+   font-size: 1.4rem;
+   color: $color-grey-primary;
+   margin: 0 auto;
+}
+
+//////////////////////////////
+/////////BUTTON
+.btn {
+   padding: 1rem 2.5rem;
+   border-radius: 100px;
+   border: none;
+   font-weight: 400;
+   background-color: $color-primary-dark;
+   color: #fff;
+   cursor: pointer;
+   transition: all 0.2s;
+
+   &--light {
+      background-color: $color-primary-light;
+      &:focus {
+         outline: none;
+      }
+   }
+
+   &--white {
+      background-color: #fff;
+      color: $color-primary-dark;
+      border: 1px solid $color-primary-light;
+      &:hover {
+         background-color: $color-primary-light;
+         color: #fff;
+      }
+   }
+
+   &--transparent {
+      background-color: transparent;
+      border: 1px solid $color-primary-light;
+      &:hover {
+         background-color: $color-primary-light;
+      }
+   }
+
+   &:focus {
+      outline: none;
+   }
+}
+
+//////////////////////////////
+/////////ABOUT
+.about {
+   .image-box {
+      float: left;
+      position: relative;
+      z-index: 1;
+      &__image {
+         height: 50rem;
+      }
+   }
+
+   .text-box {
+      padding: 4rem 4rem 4rem 8rem;
+      position: absolute;
+      top: 26rem;
+      left: 50%;
+      z-index: 2;
+      background-color: #133ea1;
+      &__paragraph {
+         font-size: 1.4rem;
+         color: #ffffffab;
+      }
+   }
+
+   .cut-box {
+      position: absolute;
+      top: 45rem;
+      left: 30%;
+      height: 5rem;
+      width: 70%;
+      z-index: 3;
+      background-color: #fff;
+   }
+}
+
+.reason {
+   display: flex;
+   .left {
+      flex: 0 0 40%;
+      padding: 2rem;
+      color: $color-grey-primary;
+      padding-right: 20rem;
+      &__paragraph {
+         font-size: 1.4rem;
+      }
+
+      &__exp-box {
+         display: flex;
+         flex-direction: column;
+         &--number {
+            font-size: 5rem;
+            font-weight: 700;
+            color: $color-primary-light;
+         }
+         &--text {
+            font-size: 1.4rem;
+         }
+      }
+   }
+   .right {
+      flex: 1;
+      padding: 2rem;
+      padding-right: 10rem;
+      &__paragraph {
+         font-size: 1.4rem;
+         color: $color-grey-primary;
+      }
+      h1 {
+         font-size: 3.2rem;
+      }
+   }
+}
+
+//////////////////////////////
+/////////SERVICES
+.image-box {
+   flex: 0 0 45%;
+   &__image {
+      width: 100%;
+      height: 80%;
+   }
+}
+
+.service-details {
+   flex: 1;
+   background-color: #133ea1;
+   height: 100%;
 }
