@@ -24,8 +24,20 @@
 }
 
 .section-services {
-   height: 60rem;
+   height: 65rem;
    margin-left: 10rem;
    display: flex;
    align-items: flex-end;
+}
+
+.section-blogs {
+   padding: 0 8rem;
+   display: flex;
+   .blank {
+      flex: 0 0 30%;
+   }
+
+   .blog {
+      flex: 1;
+   }
 }
