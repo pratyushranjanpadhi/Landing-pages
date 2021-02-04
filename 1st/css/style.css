@@ -233,6 +233,16 @@ body {
   font-size: 1.4rem;
   color: #07070780; }
 
+.details-box {
+  margin-right: 3rem;
+  padding: 2rem 0;
+  flex: 0 0 45%; }
+
+.photo-box {
+  background-size: cover; }
+  .photo-box__image {
+    height: 100%; }
+
 .header {
   padding: 2rem 4rem;
   display: flex;
@@ -266,6 +276,10 @@ body {
     flex: 0 0 30%; }
   .section-blogs .blog {
     flex: 1; }
+
+.section-why-us {
+  padding: 0 8rem;
+  display: flex; }
 
 .margin-bottom-small {
   margin-bottom: 2rem; }

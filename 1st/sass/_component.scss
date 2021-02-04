@@ -310,3 +310,18 @@
       color: #07070780;
    }
 }
+
+/////////////////////////////
+/////////WHY US
+.details-box {
+   margin-right: 3rem;
+   padding: 2rem 0;
+   flex: 0 0 45%;
+}
+
+.photo-box {
+   background-size: cover;
+   &__image {
+      height: 100%;
+   }
+}
