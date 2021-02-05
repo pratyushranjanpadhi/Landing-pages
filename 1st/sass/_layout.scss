@@ -43,6 +43,26 @@
 }
 
 .section-why-us {
-   padding: 0 8rem;
+   width: 90%;
+   margin: 0 auto;
    display: flex;
+}
+
+.section-testimonials {
+   padding: 0 15rem;
+}
+
+.footer {
+   background-color: $color-gray-secondary;
+   padding: 5rem 7rem;
+   .footer-wrap {
+      display: flex;
+   }
+   .footer-copyright {
+      padding: 5rem 0;
+      width: 70%;
+      margin: 0 auto;
+      font-size: 1.4rem;
+      text-align: center;
+   }
 }

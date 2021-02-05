@@ -10,6 +10,7 @@
 .logo-box {
    margin-left: 2rem;
    padding: 1rem;
+   animation: fadeShow 1s cubic-bezier(0.7, 0, 0.29, 1);
    &__logo {
       font-size: 2.4rem;
       color: $color-primary-dark;
@@ -19,6 +20,7 @@
 /////////////////////////////////
 //////////NAVBAR
 .list {
+   animation: fadeShow 1s cubic-bezier(0.7, 0, 0.29, 1);
    list-style: none;
    display: flex;
    &__item {
@@ -44,11 +46,18 @@
 /////////Textbox
 .heading-primary {
    font-size: 4rem;
+   transition: all 0.2s;
+   animation: moveToTop 1s cubic-bezier(0.7, 0, 0.29, 1);
    &--light {
       color: $color-heading;
    }
    &--dark {
       color: $color-heading;
+   }
+
+   &:hover {
+      transform: translateY(-3px) scale(1.01);
+      text-shadow: 0 1rem 2rem rgba(#000, 0.15);
    }
 }
 .heading-secondary {
@@ -72,6 +81,7 @@
    border: none;
    font-weight: 400;
    background-color: $color-primary-dark;
+   animation: moveToTop 1s cubic-bezier(0.7, 0, 0.29, 1);
    color: #fff;
    cursor: pointer;
    transition: all 0.2s;
@@ -149,8 +159,12 @@
       display: flex;
       &__sub {
          flex: 1;
-         border: 0.2px solid #7c757541;
+         border: 2px solid #7c757541;
          background-color: #fff;
+         transition: all 0.4s;
+         &:hover {
+            border-top: 2px solid $color-primary-dark;
+         }
          a {
             padding: 3rem 5rem;
             text-decoration: none;
@@ -158,12 +172,13 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
+            transition: all 0.4s;
             &:hover svg {
-               fill: #133ea1;
+               fill: $color-primary-dark;
             }
 
             &:hover span {
-               color: #133ea1;
+               color: $color-primary-dark;
             }
          }
          svg {
@@ -314,14 +329,181 @@
 /////////////////////////////
 /////////WHY US
 .details-box {
-   margin-right: 3rem;
+   margin-right: 20rem;
    padding: 2rem 0;
-   flex: 0 0 45%;
+   flex: 0 0 40%;
+   &__icons-box {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+   }
+
+   &__icon-unit {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      padding: 3rem;
+   }
+
+   &__icon-wrap {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 2rem;
+      box-shadow: 0 1rem 2rem rgba(#000, 0.15);
+   }
+
+   &__icon {
+      height: 2rem;
+      width: 2rem;
+      fill: $color-primary-dark;
+   }
+   &__text {
+      font-size: 1.2rem;
+   }
 }
 
 .photo-box {
-   background-size: cover;
+   align-self: stretch;
+   margin-top: 8rem;
    &__image {
-      height: 100%;
+      background-size: cover;
+      width: 100%;
+   }
+}
+
+/////////////////////////////
+/////////TESTIMONIAL
+.testimonial {
+   padding: 5rem;
+   box-shadow: 0 1rem 2rem rgba(#000, 0.15);
+   transform: skew(-9deg);
+   width: 80%;
+   margin: 0 auto;
+}
+
+.testimonial-container {
+   transform: skew(9deg);
+   display: flex;
+   flex-direction: column;
+   ///////
+   &__photo-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3rem;
+   }
+
+   &__photo {
+      margin-right: 2rem;
+      img {
+         width: 8rem;
+         height: 8rem;
+         border-radius: 50%;
+      }
+   }
+
+   &__name {
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      span {
+         font-size: 1.6rem;
+         font-weight: 700;
+         color: #5c56566e;
+      }
+   }
+
+   ////////
+
+   &__paragraph {
+      font-size: 1.4rem;
+      color: #00000069;
+   }
+}
+
+////////////////////////////////////////////////
+//////////////////////FOOTER
+.footer-about {
+   flex: 0 0 35%;
+   margin-right: 7rem;
+   &__text {
+   }
+   &__paragraph {
+      font-size: 1.4rem;
+   }
+
+   &__social {
+   }
+   &__list {
+      list-style: none;
+      display: flex;
+   }
+   &__item {
+      &:not(:last-child) {
+         margin-right: 2rem;
+      }
+   }
+   &__link {
+      display: flex;
+      height: 4rem;
+      width: 4rem;
+      border-radius: 1rem;
+      background-color: #b6b0b0ee;
+      justify-content: center;
+      transition: all 0.2s;
+      align-items: center;
+      &:hover {
+         background-color: $color-primary-dark;
+      }
+   }
+   &__icon {
+      height: 2rem;
+      width: 2rem;
+      fill: #fff;
+   }
+}
+
+.footer-links {
+   flex: 1;
+   display: flex;
+
+   & > * {
+      padding: 2rem 4rem;
+   }
+   &__nav {
+   }
+   &__services {
+   }
+   &__contact {
+   }
+
+   &__list {
+      list-style: none;
+   }
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: 2rem;
+      }
+      padding: 0.7rem 1.2rem;
+      padding-left: 0;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+   }
+   &__link {
+      display: inline-block;
+      text-decoration: none;
+      transition: all 0.2s;
+      color: #857f7f;
+      font-weight: 700;
+      &:hover {
+         transform: translateY(-2px) scale(1.05);
+         text-shadow: 0 1rem 2rem rgba(#000, 0.15);
+         color: #133ea1;
+      }
    }
 }
